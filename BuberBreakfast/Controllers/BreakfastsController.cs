@@ -16,8 +16,8 @@ public class BreakfastsController : ControllerBase
     return Ok(id);
   }
 
-  [HttpPut("/breafasts/{id:guid}")]
-  public IActionResult UpsertBreakfastRequest(Guid id, UpsertBreakfastRequest request)
+  [HttpPut("/breakfasts/{id:guid}")]
+  public IActionResult UpsertBreakfast(Guid id, UpsertBreakfastRequest request)
   {
     return Ok(request);
   }
