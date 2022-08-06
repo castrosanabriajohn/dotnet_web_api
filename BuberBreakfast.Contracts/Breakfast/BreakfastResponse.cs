@@ -5,6 +5,7 @@ public record BreakfastResponse(
   string Description,
   DateTime StartDateTime,
   DateTime EndDateTime,
+  DateTime LastModifiedDateTime,
   List<string> Savory,
   List<string> Sweet
 );
