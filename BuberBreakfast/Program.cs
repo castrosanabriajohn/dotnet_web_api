@@ -11,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 }
 var app = builder.Build(); // App variable for managing the request pipeline
 {
+  // using built-in capability of the framework to add try catches surrounding the following middlewares
+  app.UseExceptionHandler("/error"); // if an exception is encountered, it's catched and switches the request route to the one specified and re-executes the request 
   app.UseHttpsRedirection();
   app.MapControllers();
   app.Run();
